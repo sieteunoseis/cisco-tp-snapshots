@@ -10,12 +10,14 @@ export class TpEndpoint {
     this.ceConfig = {
       host: params.host,
       username: params.username,
-      password: params.password
+      password: params.password,
+      proxy: params.proxy,
     };
     this.apiRequest = axios.create({
       baseURL: `https://${params.host}`,
       auth: { username: params.username, password: params.password },
-      adapter: require('axios/lib/adapters/http')
+      adapter: require('axios/lib/adapters/http'),
+      proxy: params.proxy
     })
   }
 
