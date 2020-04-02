@@ -23,7 +23,8 @@ const fs = require('fs');
 const ce = new TpEndpoint({
   host: 'ip/hostname',
   username: 'user',
-  password: 'pass'
+  password: 'pass',
+  proxy: false
 });
 
 // Verify Endpoint has the Feature
